@@ -15,6 +15,21 @@
         if($error == 'faltan_valores'){
             echo '<strong style="color:red">Introduce todos los datos en todos los campos del formulario</strong>';
         }
+        if($error == 'nombre'){
+            echo '<strong style="color:red">Introduce bien el nombre</strong>';
+        }
+        if($error == 'apellidos'){
+            echo '<strong style="color:red">Los apellidos no son correctos</strong>';
+        }
+        if($error == 'edad'){
+            echo '<strong style="color:red">Introduzca una edad correcta</strong>';
+        }
+        if($error == 'email'){
+            echo '<strong style="color:red">Introduce un mail valido</strong>';
+        }
+        if($error == 'password'){
+            echo '<strong style="color:red">Introduce una contraseña de más de 5 letras</strong>';
+        }
     }
     ?>
 
@@ -34,7 +49,7 @@
         <input type="email" name="email" required="required"><br />
 
         <label for="pass">Password</label><br />
-        <input type="password" name="pass" required="required"><br />
+        <input type="password" name="pass" required="required" minlength="5"><br />
 
 
         <input type="submit" value="Enviar">
